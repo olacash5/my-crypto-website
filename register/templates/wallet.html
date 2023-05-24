@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Wallet</title>
+  </head>
+  <body>
+    {% block content %}
+    <h1>Create Wallet</h1>
+    <form action="wallet" method="post">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+
+      <label for="emai;">email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <input type="submit" value="create wallet">
+    </form>
+  </body>
+  {% endblock %}
+</html>
